@@ -1,8 +1,4 @@
-// import Navbar from "#components/Navbar.jsx"
-// import Welcome from "#components/Welcome.jsx"
-
-import Welcome from "#components/Navbar.jsx"
-import Navbar from "#components/Welcome.jsx"
+import { Navbar, Welcome } from "#components"
 
 const App = () => {
   return (
