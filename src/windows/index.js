@@ -1,3 +1,5 @@
 import Terminal from "./Terminal";
 
-export {Terminal}
+import Resume from "./Resume"
+
+export {Terminal, Resume}
