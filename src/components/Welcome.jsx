@@ -16,7 +16,7 @@ const renderText = (text, className, baseWeight = 400) => {
 
 const FONT_WEIGHTS = {
   subtitle: { min: 100, max: 400, default: 100 },
-  title: { min: 400, max: 900, deefault: 400 },
+  title: { min: 400, max: 900, default: 400 },
 };
 
 const setupTextHover = (container, type) => {
