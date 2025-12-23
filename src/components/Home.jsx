@@ -6,14 +6,20 @@ import clsx from "clsx";
 import { Draggable } from "gsap/Draggable";
 
 const projects = locations.work?.children ?? [];
+const files = locations.resume?.children ?? [];
 
 const Home = () => {
   const { setActiveLocation } = useLocationStore();
 
   const { openWindow } = useWindowStore();
+  
   const handleOpenProjectFinder = (project) => {
-    setActiveLocation(project)
+    setActiveLocation(project);
     openWindow("finder");
+  };
+
+  const handleOpenFileFinder = () => {
+    openWindow("resume");
   };
 
   useGSAP(() => {
@@ -33,6 +39,18 @@ const Home = () => {
             <p>{project.name}</p>
           </li>
         ))}
+
+        {files.map((file) => (
+          <li
+            key={file.id}
+            className={clsx("group folder", file.windowPosition)}
+            onClick={() => handleOpenFileFinder()}
+          >
+            <img src="/images/pdf.png" alt={file.name} />
+            <p>{file.name}</p>
+          </li>
+        ))}
+
       </ul>
     </section>
   );
